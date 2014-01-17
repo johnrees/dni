@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DNI Tester</title>
+  <style type="text/css">
+  * {
+    font-size: 17px;
+  }
+  </style>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#input').keyup(function() {
+      val = parseInt($('#input').val())
+      result = val % 23
+      letters = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E']
+      console.log(result);
+      $('#result').val(letters[result]);
+    })
+  });
+  </script>
+</head>
+<body>
+
+<p>Please enter the 7 or 8 numbers on your DNI, the second box should show the correct letter</p>
+
+<input type="text" id="input" placeholder="DNI digits" autofocus="true" size="10" maxlength="8" />
+<input type="text" id="result" disabled="true" size="1" maxlength="1" />
+
+</body>
+</html>
