@@ -9,21 +9,11 @@
   }
   </style>
   <script src="jquery.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-    $('#input').keyup(function() {
-      val = parseInt($('#input').val())
-      result = val % 23
-      letters = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E']
-      console.log(result);
-      $('#result').val(letters[result]);
-    })
-  });
-  </script>
+  <script src="validator.js"></script>
 </head>
 <body>
 
-<h1>DNI Tester</h1>
+<h1>1. DNI Tester</h1>
 
 <p>Please enter the 7 or 8 numbers on your DNI, the second box should show the correct letter.</p>
 
@@ -32,7 +22,14 @@
 <input type="text" id="input" placeholder="DNI digits" autofocus="true" size="10" maxlength="8" />
 <input type="text" id="result" disabled="true" size="1" maxlength="1" />
 
-<p>Thanks!</p>
+<hr/>
+
+<h1>2. Generic ID Tester</h1>
+
+<div>
+<label>DNI or CIF or NIE</label>
+<input id="id"/><span class="status"></span>
+</div>
 
 </body>
 </html>
